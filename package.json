@@ -3,13 +3,20 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "allowScripts": {
+    "@prisma/client@5.22.0": true,
+    "@prisma/engines@5.22.0": true,
+    "prisma@5.22.0": true,
+    "esbuild@0.25.12": true,
+    "esbuild@0.27.3": true
+  },
   "scripts": {
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:frontend\" ",
     "dev:frontend": "vite",
     "dev:server": "tsx scripts/prepare-db.ts && cd server && tsx watch src/index.ts",
     "build": "npm run build:server && tsc -b && vite build",
     "build:frontend": "tsc -b && vite build",
-    "build:server": "cd server && npx prisma generate && tsc",
+    "build:server": "cd server && npx prisma generate && tsc -p tsconfig.json",
     "lint": "eslint .",
     "test": "echo \"No tests configured\" && exit 0",
     "preview": "vite preview",
