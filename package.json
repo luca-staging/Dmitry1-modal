@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "@prisma/client": "^5.22.0",
+    "@rive-app/react-canvas": "^4.39.0",
     "@tremor/react": "^3.18.7",
     "axios": "^1.13.4",
     "bcryptjs": "^2.4.3",
@@ -53,7 +54,8 @@
     "recharts": "^2.14.1",
     "tweetnacl": "^1.0.3",
     "uuid": "^10.0.0",
-    "viem": "^2.45.1"
+    "viem": "^2.45.1",
+    "wallet-connect-modal": "github:john20010619/john-modal"
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
